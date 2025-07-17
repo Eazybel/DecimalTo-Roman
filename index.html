@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roman Numeral Converter</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-600 to-blue-500 min-h-screen flex items-center justify-center p-4">
+    <div class="bg-white p-8 rounded-2xl shadow-2xl w-full max-w-md transform transition-all duration-300 hover:scale-105">
+        <h1 class="text-4xl font-extrabold text-gray-900 mb-6 text-center">
+            Roman Numeral Converter
+        </h1>
+        <p class="text-gray-600 text-center mb-8">
+            Enter a decimal number (1-3999) to convert it to Roman numerals.
+        </p>
+
+        <div class="mb-6">
+            <label for="decimalInput" class="block text-gray-700 text-sm font-semibold mb-2">
+                Decimal Number:
+            </label>
+            <input
+                type="number"
+                id="decimalInput"
+                class="shadow-sm appearance-none border rounded-xl w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-transparent transition duration-200"
+                placeholder="e.g., 1994"
+                min="1"
+                max="3999"
+            >
+        </div>
+
+        <button
+            id="convertButton"
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75 transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+        >
+            Convert to Roman
+        </button>
+
+        <div id="resultContainer" class="mt-8 p-6 bg-blue-50 rounded-xl border border-blue-200 text-center text-gray-800 hidden">
+            <h2 class="text-xl font-semibold mb-2">Roman Numeral:</h2>
+            <p id="romanResult" class="text-3xl font-bold text-blue-800 break-words"></p>
+            <p id="errorMessage" class="text-red-600 text-sm mt-2 hidden"></p>
+        </div>
+    </div>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
